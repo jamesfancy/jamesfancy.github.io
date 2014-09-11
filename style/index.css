@@ -22,6 +22,28 @@ h4,
 h5 {
   font-weight: normal;
 }
+h3 {
+  font-size: 18px;
+  margin-top: 48px;
+  margin-bottom: 0.5em;
+  border-bottom: 2px solid #3c3a38;
+  padding-bottom: 8px;
+}
+h3 .sub-title {
+  font-size: 14px;
+  margin-left: 20px;
+}
+h3 span {
+  font-size: 14px;
+  margin-left: 20px;
+}
+h3 a {
+  font-size: 14px;
+  margin-left: 20px;
+}
+p {
+  margin: 4px;
+}
 .outer-panel {
   width: 720px;
   margin-left: auto;
@@ -41,36 +63,107 @@ h5 {
   line-height: 1em;
   margin: 0;
 }
-.banner-panel h2 {
-  font-size: 16px;
-  line-height: 16px;
-  margin: 16px 0 0 28px;
-}
-.banner-panel h2 span {
+.banner-panel h1 span {
   margin-left: 2em;
-  font-size: 12px;
+  font-size: 16px;
   border-radius: 1px;
   background-color: #838383;
   color: #242424;
   padding: 1px 6px;
 }
-h3 {
-  font-size: 18px;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
+.content-container {
+  position: fixed;
+  top: 96px;
+  bottom: 64px;
+  width: 720px;
+  left: 50%;
+  margin-left: -360px;
+  overflow: hidden;
 }
-h3 a {
-  font-size: 14px;
-}
-p {
-  margin: 4px;
+.content-container .content-scroll {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 800px;
+  overflow-y: auto;
 }
 .content-panel {
-  margin-top: 144px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  margin-left: 0;
+}
+.content-panel .highlight {
+  background-color: rgba(23, 22, 21, 0.4);
+  border-radius: 2px;
 }
 .content-panel .content {
   margin: 0;
-  background-color: rgba(23, 22, 21, 0.4);
-  border-radius: 2px;
-  padding: 10px;
+  padding: 0 10px;
+  color: #d0d0d0;
+}
+.content-panel .content.custom {
+  padding: 0;
+}
+.content-panel .hold {
+  height: 96px;
+  position: relative;
+  padding: 0;
+  margin-bottom: 96px;
+}
+.content-panel .hold h3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 380px;
+  margin: 0;
+  padding-top: 0;
+  color: #efefef;
+}
+.content-panel .hold div {
+  position: absolute;
+  bottom: 0;
+  width: 380px;
+  padding-bottom: 3px;
+  text-align: right;
+  color: #d0d0d0;
+}
+.content-panel .hold a {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  width: 320px;
+  padding: 32px 0;
+  border: 0;
+  font-size: 32px;
+  line-height: 32px;
+  text-align: center;
+}
+.content-panel .hold a:hover {
+  background-color: #838383;
+  color: #3c3a38;
+}
+.footer-panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 48px;
+  background: #3C3A38;
+  box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.5);
+}
+.footer-panel .span {
+  color: #838383;
+  line-height: 48px;
+}
+.footer-panel span {
+  color: #838383;
+  line-height: 48px;
+  margin-left: 24px;
+}
+.footer-panel a {
+  color: #838383;
+  line-height: 48px;
+  float: right;
+  margin-right: 24px;
 }
