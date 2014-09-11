@@ -1,0 +1,89 @@
+@font: "Microsoft YaHei", "微软雅黑", verdana, "Segoe WP";
+@font-color: #efefef;
+@link-line: #838383;
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url(res/bg.png) repeat;
+    color: @font-color;
+    font-family: @font;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+a {
+    color: @font-color;
+    text-decoration: none;
+    border-bottom: 1px solid @link-line;
+
+    &:hover {
+        border-color: @font-color;
+    }
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: normal;
+}
+
+.outer-panel {
+    width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.banner-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 24px 64px;
+    background: #3C3A38;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+
+    h1 {
+        font-size: 28px;
+        line-height: 1em;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 16px;
+        line-height: 16px;
+        margin: 16px 0 0 28px;
+
+        span {
+            margin-left: 2em;
+            font-size: 12px;
+            border-radius: 1px;
+            background-color: @link-line;
+            color: #242424;
+            padding: 1px 6px;
+        }
+   }
+}
+
+h3 {
+    font-size: 18px;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+
+    a {
+        font-size: 14px;
+    }
+}
+
+p {
+    margin: 4px;
+}
+
+.content-panel {
+    margin-top: 144px;
+
+    .content {
+        margin: 0;
+        background-color: rgba(23, 22, 21, 0.4);
+        border-radius: 2px;
+        padding: 10px;
+    }
+}
