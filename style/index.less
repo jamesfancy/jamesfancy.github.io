@@ -1,34 +1,4 @@
-@font: "Microsoft YaHei", "微软雅黑", verdana, "Segoe WP";
-@font-color: #efefef;
-@font-remark: #d0d0d0;
-@line: #3c3a38;
-@link-line: #838383;
-@content-width: 720px;
-@body-bg: url(res/bg.png) repeat;
-
-body {
-    margin: 0;
-    padding: 0;
-    background: @body-bg;
-    color: @font-color;
-    font-family: @font;
-    overflow: hidden;
-    font-size: 14px;
-}
-
-a {
-    color: @font-color;
-    text-decoration: none;
-    border-bottom: 1px solid @link-line;
-
-    &:hover {
-        border-color: @font-color;
-    }
-}
-
-h1, h2, h3, h4, h5 {
-    font-weight: normal;
-}
+@import url(define.less);
 
 h3 {
     font-size: 18px;
@@ -52,74 +22,14 @@ h3 {
     }
 }
 
-p {
-    margin: 4px;
-}
-
-.outer-panel {
-    width: @content-width;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.banner-panel {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 24px 64px;
-    background: #3C3A38;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
-
-    h1 {
-        font-size: 28px;
-        line-height: 1em;
-        margin: 0;
-
-        span {
-            margin-left: 2em;
-            font-size: 16px;
-            border-radius: 1px;
-            background-color: @link-line;
-            color: #242424;
-            padding: 1px 6px;
-        }
-    }
-}
-
-.content-container {
-    position: fixed;
-    top: 96px;
-    bottom: 64px;
-    width: @content-width;
-    left: 50%;
-    margin-left: -360px;
-    overflow: hidden;
-
-    .content-scroll {
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        width: 800px;
-        overflow-y: auto;
-    }
-}
-
 .content-panel {
-    margin-top: 24px;
-    margin-bottom: 24px;
-    margin-left: 0;
-
-    .highlight {
-        background-color: rgba(23, 22, 21, 0.4);
-        border-radius: 2px;
-    }
-
     .content {
         margin: 0;
         padding: 0 10px;
+        margin-left: 14px;
         color: @font-remark;
+        border-left: 4px solid @link-line;
+        border-radius: 1px;
 
         &.custom {
             padding: 0;
@@ -127,15 +37,17 @@ p {
     }
 
     .hold {
-        @left-width: 340px;
-        @v-spacing: 20px;
-        @h-spacing: 20px;
-        .content-panel.highlight;
+        @left-width: 380px;
+        @v-spacing: 10px;
+        @h-spacing: 10px;
+        @radius: 1px;
 
         height: 96px;
         position: relative;
-        margin-bottom: 96px;
-        padding: @v-spacing @h-spacing;
+        margin-bottom: 64px;
+        padding: 0 10px;
+        background-color: rgba(33, 32, 31, 0.4);
+        border-radius: @radius;
 
         h3 {
             position: absolute;
@@ -156,48 +68,24 @@ p {
         }
 
         a {
+            @line-width: 0px;
             display: inline-block;
             position: absolute;
-            right: @h-spacing;
+            top: @line-width;
+            right: @line-width;
+            bottom: @line-width;
             width: 320px;
             padding: 32px 0;
             border: 0;
-            border-radius: 3px;
+            border-radius: @radius;
             font-size: 32px;
             line-height: 32px;
             text-align: center;
-            background: @body-bg;
 
             &:hover {
                 background: @link-line;
                 color: @line;
             }
         }
-    }
-}
-
-.footer-panel {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 48px;
-    background: #3C3A38;
-    box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.5);
-
-    .span {
-        color: @link-line;
-        line-height: 48px;
-    }
-
-    span {
-        .span;
-        margin-left: 24px;
-    }
-
-    a {
-        .span;
-        float: right;
-        margin-right: 24px;
     }
 }

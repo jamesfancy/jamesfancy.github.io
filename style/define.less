@@ -1,0 +1,122 @@
+@charset: "utf-8";
+
+@font: "Microsoft YaHei", "微软雅黑", verdana, "Segoe WP";
+@font-color: #efefef;
+@font-remark: #d0d0d0;
+@line: #3c3a38;
+@link-line: #838383;
+@content-width: 960px;
+@body-bg: url(res/bg.png) repeat;
+
+body {
+    margin: 0;
+    padding: 0;
+    background: @body-bg;
+    color: @font-color;
+    font-family: @font;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+a {
+    color: @font-color;
+    text-decoration: none;
+    border-bottom: 1px solid @link-line;
+
+    &:hover {
+        border-color: @font-color;
+    }
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: normal;
+}
+
+p {
+    margin: 4px 0;
+}
+
+.outer-panel {
+    width: @content-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.banner-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 24px 64px;
+    background: #3C3A38;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+
+    h1 {
+        font-size: 28px;
+        line-height: 1em;
+        margin: 0;
+
+        span {
+            margin-left: 2em;
+            font-size: 16px;
+            border-radius: 1px;
+            background-color: @link-line;
+            color: #242424;
+            padding: 1px 6px;
+        }
+    }
+}
+
+.content-container {
+    position: fixed;
+    top: 72px;
+    bottom: 48px;
+    width: @content-width;
+    left: 50%;
+    margin-left: -(@content-width/2);
+    overflow: hidden;
+
+    .content-scroll {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: @content-width + 60px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+}
+
+.content-panel {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    margin-left: 0;
+}
+
+.footer-panel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    background: #3C3A38;
+    box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+
+    .span {
+        color: @link-line;
+        line-height: 48px;
+    }
+
+    span {
+        .span;
+        margin-left: 24px;
+    }
+
+    a {
+        .span;
+        float: right;
+        margin-right: 24px;
+    }
+}

@@ -38,7 +38,6 @@ p {
   padding: 24px 64px;
   background: #3C3A38;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
-  z-index: 10;
 }
 .banner-panel h1 {
   font-size: 28px;
@@ -55,8 +54,8 @@ p {
 }
 .content-container {
   position: fixed;
-  top: 72px;
-  bottom: 48px;
+  top: 96px;
+  bottom: 64px;
   width: 960px;
   left: 50%;
   margin-left: -480px;
@@ -84,7 +83,6 @@ p {
   height: 48px;
   background: #3C3A38;
   box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.5);
-  z-index: 10;
 }
 .footer-panel .span {
   color: #838383;
@@ -100,77 +98,4 @@ p {
   line-height: 48px;
   float: right;
   margin-right: 24px;
-}
-h3 {
-  font-size: 18px;
-  margin-top: 48px;
-  margin-bottom: 0.5em;
-  border-bottom: 2px solid #3c3a38;
-  padding-bottom: 8px;
-  padding-left: 10px;
-}
-h3 .sub-title {
-  font-size: 14px;
-  margin-left: 20px;
-}
-h3 span {
-  font-size: 14px;
-  margin-left: 20px;
-}
-h3 a {
-  font-size: 14px;
-  margin-left: 20px;
-}
-.content-panel .content {
-  margin: 0;
-  padding: 0 10px;
-  margin-left: 14px;
-  color: #d0d0d0;
-  border-left: 4px solid #838383;
-  border-radius: 1px;
-}
-.content-panel .content.custom {
-  padding: 0;
-}
-.content-panel .hold {
-  height: 96px;
-  position: relative;
-  margin-bottom: 64px;
-  padding: 0 10px;
-  background-color: rgba(33, 32, 31, 0.4);
-  border-radius: 1px;
-}
-.content-panel .hold h3 {
-  position: absolute;
-  top: 10px;
-  left: 0;
-  width: 400px;
-  margin: 0;
-  padding-top: 0;
-  color: #efefef;
-}
-.content-panel .hold div {
-  position: absolute;
-  bottom: 10px;
-  width: 380px;
-  text-align: right;
-  color: #d0d0d0;
-}
-.content-panel .hold a {
-  display: inline-block;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  width: 320px;
-  padding: 32px 0;
-  border: 0;
-  border-radius: 1px;
-  font-size: 32px;
-  line-height: 32px;
-  text-align: center;
-}
-.content-panel .hold a:hover {
-  background: #838383;
-  color: #3c3a38;
 }
