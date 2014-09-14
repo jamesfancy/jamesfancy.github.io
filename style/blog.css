@@ -38,6 +38,7 @@ p {
   padding: 24px 64px;
   background: #3C3A38;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  z-index: 10;
 }
 .banner-panel h1 {
   font-size: 28px;
@@ -54,8 +55,8 @@ p {
 }
 .content-container {
   position: fixed;
-  top: 96px;
-  bottom: 64px;
+  top: 72px;
+  bottom: 48px;
   width: 960px;
   left: 50%;
   margin-left: -480px;
@@ -83,6 +84,7 @@ p {
   height: 48px;
   background: #3C3A38;
   box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.5);
+  z-index: 10;
 }
 .footer-panel .span {
   color: #838383;
