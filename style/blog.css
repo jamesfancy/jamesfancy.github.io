@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "source-code-pro";
+  src: url(res/SourceCodePro-Regular.otf);
+}
 body {
   margin: 0;
   padding: 0;
@@ -5,7 +9,7 @@ body {
   color: #efefef;
   font-family: "Microsoft YaHei", "微软雅黑", verdana, "Segoe WP";
   overflow: hidden;
-  font-size: 14px;
+  font-size: 16px;
 }
 a {
   color: #efefef;
@@ -50,7 +54,7 @@ p {
   font-size: 16px;
   border-radius: 1px;
   background-color: #838383;
-  color: #242424;
+  color: #202020;
   padding: 1px 6px;
 }
 .content-container {
@@ -100,4 +104,55 @@ p {
   line-height: 48px;
   float: right;
   margin-right: 24px;
+}
+body > *:first-child {
+  margin-top: 0 !important;
+}
+body p,
+body blockquote,
+body ul,
+body ol,
+body dl,
+body table,
+body pre {
+  margin-bottom: 16px;
+}
+blockquote {
+  border-left: 4px solid #838383;
+  padding: 0 15px;
+  margin: 0;
+  color: #d0d0d0;
+}
+blockquote > p:first-child {
+  margin-top: 0;
+}
+blockquote > p:last-child {
+  margin-bottom: 0;
+}
+code {
+  font-family: "Source Code Pro", "source-code-pro", monospace;
+  background-color: #3e3d3c;
+  color: #f9f9f9;
+  padding: 2px 5px;
+  margin: 0 2px;
+  border-radius: 2px;
+}
+pre {
+  background-color: #3e3d3c;
+  padding: 16px;
+  border-radius: 2px;
+  font-size: 14px;
+}
+pre code {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+}
+p {
+  line-height: 1.8em;
+}
+p > img {
+  display: block;
+  margin: 0 auto;
 }

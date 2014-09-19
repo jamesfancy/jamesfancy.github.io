@@ -1,11 +1,20 @@
 @charset: "utf-8";
 
+@font-face {
+    font-family: "source-code-pro";
+    src: url(res/SourceCodePro-Regular.otf);
+}
+
 @font: "Microsoft YaHei", "微软雅黑", verdana, "Segoe WP";
+@source-font: "Source Code Pro", "source-code-pro", monospace;
 @font-color: #efefef;
 @font-remark: #d0d0d0;
+@font-highlight: #f9f9f9;
+@font-revert: #202020;
 @line: #3c3a38;
 @link-line: #838383;
 @content-width: 960px;
+@code-bg: #3e3d3c;
 @body-bg: url(res/bg.png) repeat;
 
 body {
@@ -15,7 +24,7 @@ body {
     color: @font-color;
     font-family: @font;
     overflow: hidden;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 a {
@@ -62,7 +71,7 @@ p {
             font-size: 16px;
             border-radius: 1px;
             background-color: @link-line;
-            color: #242424;
+            color: @font-revert;
             padding: 1px 6px;
         }
     }

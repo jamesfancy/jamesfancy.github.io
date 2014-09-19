@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "source-code-pro";
+  src: url(res/SourceCodePro-Regular.otf);
+}
 body {
   margin: 0;
   padding: 0;
@@ -5,7 +9,7 @@ body {
   color: #efefef;
   font-family: "Microsoft YaHei", "微软雅黑", verdana, "Segoe WP";
   overflow: hidden;
-  font-size: 14px;
+  font-size: 16px;
 }
 a {
   color: #efefef;
@@ -50,7 +54,7 @@ p {
   font-size: 16px;
   border-radius: 1px;
   background-color: #838383;
-  color: #242424;
+  color: #202020;
   padding: 1px 6px;
 }
 .content-container {
@@ -144,7 +148,7 @@ h3 a {
   position: absolute;
   top: 10px;
   left: 0;
-  width: 400px;
+  width: 640px;
   margin: 0;
   padding-top: 0;
   color: #efefef;
@@ -152,9 +156,10 @@ h3 a {
 .content-panel .hold div {
   position: absolute;
   bottom: 10px;
-  width: 380px;
+  width: 620px;
   text-align: right;
   color: #d0d0d0;
+  font-size: 14px;
 }
 .content-panel .hold a {
   display: inline-block;

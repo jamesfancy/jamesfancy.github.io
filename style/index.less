@@ -37,7 +37,7 @@ h3 {
     }
 
     .hold {
-        @left-width: 380px;
+        @left-width: @content-width - 340px;
         @v-spacing: 10px;
         @h-spacing: 10px;
         @radius: 1px;
@@ -65,6 +65,7 @@ h3 {
             width: @left-width;
             text-align: right;
             color: @font-remark;
+            font-size: 14px;
         }
 
         a {
