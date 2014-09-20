@@ -16,13 +16,12 @@ define(function(require, exports, module) {
         content: $("#blog-content"),
         render: function(issue) {
             this.title.text(issue.title || "标题去哪儿啦——？")
-            this.content.html(new Md2Html(issue.body).toHtml())
+            this.content.empty().append(new Md2Html(issue.body).toHtml())
         }
     }
 
     return {
         show: function(id) {
-            console.log("id", id)
             github.getIssue(id, function(error, json) {
                 if (error) {
                     console.error(error)

@@ -3,32 +3,6 @@
 define(function(require, exports, module) {
     var app = require("app")
     var $ = jQuery
-    var series = require("./series")
-
-    window.s = series
-
-    var Settings = (function() {
-        function Settings(json) {
-            this.data = JSON.parse(json)
-        }
-
-        var p = Settings.prototype
-
-        p.get = function(name) {
-            return this.data[name]
-        }
-
-        p.getHeadingSeries = function(tagName) {
-            (this.data.headings || {})[tagName.toLowerCase()]
-        }
-
-        Settings.get = function(html) {
-            var json = (html.match(/<!--\s*settings([\s\S]+?)-->/) || [])[1]
-            return new Settings(json)
-        }
-
-        return Settings;
-    })()
 
     module.exports = (function() {
         function Md2Html(md) {
@@ -44,27 +18,65 @@ define(function(require, exports, module) {
         p.toHtml = function() {
             this.pre()
             this.html = app.md2html(this.md)
+            this.postHtml()
             this.jdom = $(this.html)
             this.post()
 
             return this.jdom
         }
 
-        p.post = function() {
-            var settings = Settings.get(this.html)
-            var jdom = this.jdom
-            var wrappred = $("<div>").append(jdom)
+        p.postHtml = function() {
+            var pos = this.html.indexOf("[TOC]")
+            if (pos < 0) {
+                return
+            }
 
-            !(function(headings) {
-                if (!headings) {
-                    return;
+            this.html = this.html.replace('[TOC]', '<div id="topic-of-content"></div>')
+        }
+
+        p.post = function() {
+            var settings = require("./settings").get(this.html)
+            var container = $("<div>").append(this.jdom)
+
+            var headers = (function(Headers) {
+                return new Headers($(":header", container))
+            })(require("./headers"))
+
+            headers.serialize(settings)
+
+            !(function(toc) {
+                if (toc.length === 0) {
+                    return
                 }
 
-                $(":header", wrappred).each(function() {
-                    var h = $(this)
-                    var tagName = h[0].tagName.toLowerCase()
-                })
-            })(settings.get("headings"))
+                var topics = headers.getTopics()
+
+                var ul = $("<ul>")
+                create(topics, ul)
+                ul.appendTo(toc)
+
+                function create(topics, ul) {
+                    if (topics.length === 1 && !topics[0].text) {
+                        // 这是虚主题（因为没有定义该主题，创建的一个用于连接下级主题的主题）
+
+                        create(topics[0].children, ul)
+                        return
+                    }
+
+                    topics.forEach(function(topic) {
+                        if (topic.text) {
+                            li = $("<li>").append(
+                                $("<a>").attr("href", "#" + topic.id).text(topic.text)
+                            ).appendTo(ul)
+                        }
+
+                        if (topic.children && topic.children.length) {
+                            var subUl = li ? $("<ul>").appendTo(li) : ul
+                            create(topic.children, subUl)
+                        }
+                    })
+                }
+            })($("#topic-of-content", container))
         }
 
         return Md2Html
