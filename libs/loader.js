@@ -6,7 +6,8 @@ void function() {
             // get base in following scripts
             base: "",
             alias: {
-                jquery: "http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"
+                jquery: "http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js",
+                shjs: "sh_main.min.js"
             },
         }
     }

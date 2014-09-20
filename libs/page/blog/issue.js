@@ -2,16 +2,21 @@
 /* global define: false */
 define(function(require, exports, module) {
     var app = require("app")
-    console.log("jquery", $, jQuery)
-
     var github = app.github;
+
+    var Md2Html = require("./md2html")
+
+    require("shjs")
+    function highlight() {
+        sh_highlightDocument("lang/", ".min.js")
+    }
 
     var blog = {
         title: $("#blog-title"),
         content: $("#blog-content"),
         render: function(issue) {
             this.title.text(issue.title || "标题去哪儿啦——？")
-            this.content.html(app.md2html(issue.body))
+            this.content.html(new Md2Html(issue.body).toHtml())
         }
     }
 
