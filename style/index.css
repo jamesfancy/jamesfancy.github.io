@@ -39,6 +39,7 @@ p {
   top: 0;
   left: 0;
   right: 0;
+  height: 36px;
   padding: 24px 64px;
   background: #3C3A38;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
