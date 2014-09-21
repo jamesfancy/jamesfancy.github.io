@@ -42,15 +42,25 @@ code {
 }
 
 pre {
-    background-color: @code-bg;
     padding: 16px;
     border-radius: 2px;
     font-size: 14px;
+    background-color: @code-block-bg;
+    background-image: url("res/pre-left.png");
+    background-repeat: repeat-y;
+    background-position: -24px 0;
+    line-height: 20px;
 
     code {
+        display: block;
         background-color: transparent;
+        background-image: url("res/lines.png");
+        background-repeat: repeat-y;
+        background-position: -8px 2px;
+        background-clip: padding-box;
+        background-origin: padding-box;
         border-radius: 0;
-        padding: 0;
+        padding: 0 0 0 32px;
         margin: 0;
     }
 }
