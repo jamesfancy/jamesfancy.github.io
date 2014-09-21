@@ -35,6 +35,9 @@ define(function(require, exports, module) {
     }
 
     var github = {
+        getIssues: function(page, callback) {
+            jsonApi("get", api("issues"), callback)
+        },
         getIssue: function(id, callback) {
             jsonApi("get", api("issues", id), callback)
         },

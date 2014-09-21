@@ -13,7 +13,7 @@ define(function(require) {
                 require("./blog/issue").show(id)
             }
         } else {
-            require("./blog/list").show()
+            window.location.replace(window.location.href.replace(/\/blog.*/, "/blogs"))
         }
     }).trigger("hashchange")
 

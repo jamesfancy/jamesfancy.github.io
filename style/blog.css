@@ -60,7 +60,7 @@ p {
 }
 .content-container {
   position: fixed;
-  top: 72px;
+  top: 96px;
   bottom: 48px;
   width: 960px;
   left: 50%;
@@ -177,6 +177,31 @@ p > img {
   margin: 0 4px;
   padding: 0;
   display: inline-block;
+}
+div.topic-link {
+  margin: 0 48px 12px;
+}
+div.topic-link a {
+  padding: 3px 6px;
+  margin-left: 6px;
+}
+div.topic-link span {
+  display: inline-block;
+  padding: 3px 6px;
+  background-color: #3e3d3c;
+  border: 1px solid #3e3d3c;
+}
+div.topic-link span:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+div.topic-link span.value {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 28px;
+  text-align: center;
+  background-color: #838383;
+  color: #202020;
 }
 #topic-of-content {
   background-color: #3e3d3c;
