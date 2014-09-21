@@ -55,11 +55,33 @@ pre {
     }
 }
 
+h1, h2 {
+    padding: 32px 0 16px;
+    border-bottom: 1px solid @line;
+}
+
 p {
     line-height: 1.8em;
 
     > img {
         display: block;
         margin: 0 auto;        
+    }
+}
+
+#topic-of-content {
+    background-color: @code-bg;
+    border-radius: 2px;
+    padding: 16px 8px 16px;
+
+    ul {
+        margin: 0;
+        padding: 0 24px;
+
+        li {
+            margin: 0 0 8px 0;
+            padding: 0;
+            list-style-type: none;
+        }
     }
 }

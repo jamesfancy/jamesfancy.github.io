@@ -149,10 +149,29 @@ pre code {
   padding: 0;
   margin: 0;
 }
+h1,
+h2 {
+  padding: 32px 0 16px;
+  border-bottom: 1px solid #3c3a38;
+}
 p {
   line-height: 1.8em;
 }
 p > img {
   display: block;
   margin: 0 auto;
+}
+#topic-of-content {
+  background-color: #3e3d3c;
+  border-radius: 2px;
+  padding: 16px 8px 16px;
+}
+#topic-of-content ul {
+  margin: 0;
+  padding: 0 24px;
+}
+#topic-of-content ul li {
+  margin: 0 0 8px 0;
+  padding: 0;
+  list-style-type: none;
 }
