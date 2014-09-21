@@ -1,6 +1,8 @@
 /* jshing asi: true */
 /* global define: false */
 define(function(require, exports, module) {
+    var URL_BASE = "https://github.com/jamesfancy/jamesfancy.github.io/issues/"
+
     var app = require("app")
     var github = app.github;
 
@@ -14,9 +16,13 @@ define(function(require, exports, module) {
     var blog = {
         title: $("#blog-title"),
         content: $("#blog-content"),
-        render: function(issue) {
+        comments: $("#comments"),
+        render: function(id, issue) {
             this.title.text(issue.title || "标题去哪儿啦——？")
             this.content.empty().append(new Md2Html(issue.body).toHtml())
+            this.comments
+                .text(issue.comments.toString() + " 条评论")
+                .attr("href", URL_BASE + id + "#new_comment_field")
         }
     }
 
@@ -28,7 +34,7 @@ define(function(require, exports, module) {
                     return;
                 }
 
-                blog.render(json)
+                blog.render(id, json)
             })
         }
     }
