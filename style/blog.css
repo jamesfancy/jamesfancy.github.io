@@ -60,7 +60,7 @@ p {
 }
 .content-container {
   position: fixed;
-  top: 96px;
+  top: 72px;
   bottom: 48px;
   width: 960px;
   left: 50%;
@@ -77,7 +77,7 @@ p {
   overflow-y: auto;
 }
 .content-panel {
-  margin-top: 24px;
+  margin-top: 48px;
   margin-bottom: 24px;
   margin-left: 0;
 }
