@@ -15,13 +15,13 @@ pre.sh_sourceCode .sh_string {
   color: #f4793c;
 }
 pre.sh_sourceCode .sh_regexp {
-  color: #b4d388;
+  color: #f4793c;
 }
 pre.sh_sourceCode .sh_specialchar {
-  color: #b4d388;
+  color: #f4793c;
 }
 pre.sh_sourceCode .sh_comment {
-  color: #9e9e9e;
+  color: #9f9f9f;
 }
 pre.sh_sourceCode .sh_number {
   color: #f1f1f1;
@@ -36,13 +36,13 @@ pre.sh_sourceCode .sh_url {
   color: #f4793c;
 }
 pre.sh_sourceCode .sh_date {
-  color: #9c20ee;
+  color: #f1f1f1;
 }
 pre.sh_sourceCode .sh_time {
-  color: #9c20ee;
+  color: #f1f1f1;
 }
 pre.sh_sourceCode .sh_file {
-  color: #9c20ee;
+  color: #f4793c;
 }
 pre.sh_sourceCode .sh_ip {
   color: #f4793c;
@@ -51,7 +51,7 @@ pre.sh_sourceCode .sh_name {
   color: #f4793c;
 }
 pre.sh_sourceCode .sh_variable {
-  color: #b4d388;
+  color: #f1f1f1;
 }
 pre.sh_sourceCode .sh_oldfile {
   color: #f4793c;
@@ -60,13 +60,13 @@ pre.sh_sourceCode .sh_newfile {
   color: #f4793c;
 }
 pre.sh_sourceCode .sh_difflines {
-  color: #9c20ee;
+  color: #f1f1f1;
 }
 pre.sh_sourceCode .sh_selector {
-  color: #b4d388;
+  color: #f1f1f1;
 }
 pre.sh_sourceCode .sh_property {
-  color: #9c20ee;
+  color: #f1f1f1;
 }
 pre.sh_sourceCode .sh_value {
   color: #f4793c;

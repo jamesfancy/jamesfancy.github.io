@@ -130,13 +130,36 @@ blockquote > p:first-child {
 blockquote > p:last-child {
   margin-bottom: 0;
 }
-code {
+.code {
   font-family: "Source Code Pro", "source-code-pro", monospace;
-  background-color: #3e3d3c;
-  color: #f9f9f9;
   padding: 2px 5px;
   margin: 0 2px;
   border-radius: 2px;
+  background-color: #3e3d3c;
+  color: #f9f9f9;
+}
+code {
+  font-family: "Source Code Pro", "source-code-pro", monospace;
+  padding: 2px 5px;
+  margin: 0 2px;
+  border-radius: 2px;
+  background-color: #3e3d3c;
+  color: #f9f9f9;
+}
+kbd {
+  font-family: "Source Code Pro", "source-code-pro", monospace;
+  padding: 2px 5px;
+  margin: 0 2px;
+  border-radius: 2px;
+  background-color: #3e3d3c;
+  color: #f9f9f9;
+  padding: 1px 4px;
+  border-radius: 4px;
+  background-color: #282828;
+  border-left: 1px solid #535251;
+  border-top: 1px solid #535251;
+  border-bottom: 1px solid #141312;
+  border-right: 1px solid #141312;
 }
 pre {
   padding: 16px;
