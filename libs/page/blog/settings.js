@@ -3,7 +3,12 @@
 define(function(require) {
     var Settings = (function(series) {
         function Settings(json) {
-            this.data = JSON.parse(json)
+            try {
+                this.data = json ? JSON.parse(json) : {}
+            } catch (err) {
+                console.error(err)
+                this.data = {}
+            }
         }
 
         var p = Settings.prototype
