@@ -19,6 +19,12 @@ a {
 a:hover {
   border-color: #efefef;
 }
+a.no-line {
+  border-color: transparent;
+}
+a.no-line:hover {
+  border-color: transparent;
+}
 h1,
 h2,
 h3,
